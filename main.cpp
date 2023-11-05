@@ -3,6 +3,10 @@
 // MyDeta //
 #include "Player.h"
 
+// Stage //
+#include "MapData.h"
+#include "MapLoader.h"
+
 const char kWindowTitle[] = "ランゲーム";
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -15,8 +19,14 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	char keys[256] = {0};
 	char preKeys[256] = {0};
 
+	// csvファイルの読み込み
+	MapLoader::LoadMap();
+
 	// プレイヤーのインスタンスを作成
 	Player player;
+
+	// マップデータの初期化
+	MapData::Init();
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -41,6 +51,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
+
+		// マップの描画処理
+		MapData::Draw();
 
 		// プレイヤーの描画処理
 		player.Draw();

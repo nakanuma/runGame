@@ -14,13 +14,16 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MyDeta">
+    <Filter Include="Stage">
+      <UniqueIdentifier>{0a1d5c61-6e2d-4bda-915c-4e1eb2e1c016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyData">
       <UniqueIdentifier>{c66eb97b-4b31-45b9-955b-bf278437ec0a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MyDeta\Object">
+    <Filter Include="MyData\Object">
       <UniqueIdentifier>{8ac448e3-5c18-403f-99e6-d458afb68251}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MyDeta\Source">
+    <Filter Include="MyData\Source">
       <UniqueIdentifier>{333651f1-8815-4fee-bfef-e4df92fdaed1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -48,7 +51,13 @@
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>MyDeta\Object</Filter>
+      <Filter>MyData\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MapData.cpp">
+      <Filter>Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="MapLoader.cpp">
+      <Filter>Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,10 +133,16 @@
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>MyDeta\Object</Filter>
+      <Filter>MyData\Object</Filter>
     </ClInclude>
     <ClInclude Include="MyStruct.h">
-      <Filter>MyDeta\Source</Filter>
+      <Filter>MyData\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="MapData.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="MapLoader.h">
+      <Filter>Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
