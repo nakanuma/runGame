@@ -1,5 +1,8 @@
 #include <Novice.h>
 
+// MyDeta //
+#include "Player.h"
+
 const char kWindowTitle[] = "ランゲーム";
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -11,6 +14,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// キー入力結果を受け取る箱
 	char keys[256] = {0};
 	char preKeys[256] = {0};
+
+	// プレイヤーのインスタンスを作成
+	Player player;
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -32,6 +38,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
+
+		// プレイヤーの描画処理
+		player.Draw();
 
 		///
 		/// ↑描画処理ここまで
