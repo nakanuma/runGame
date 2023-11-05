@@ -7,6 +7,7 @@ public:
 	static void Init();
 
 	static int floorGH;
+	static int blockGH;
 
 	const static int kMapColumn = 12; // マップの高さ
 	const static int kMapRow = 200; // マップの横幅

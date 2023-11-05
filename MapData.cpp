@@ -2,6 +2,7 @@
 
 int MapData::map[kMapColumn][kMapRow];
 int MapData::floorGH;
+int MapData::blockGH;
 
 void MapData::Draw()
 {
@@ -17,6 +18,16 @@ void MapData::Draw()
 					0xFFFFFFFF
 				);
 			}
+			// ブロックの描画
+			if (map[i][j] == 2) {
+				Novice::DrawSprite(
+					j * kBlockSize, i * kBlockSize,
+					blockGH,
+					1.0f, 1.0f,
+					0.0f,
+					0xFFFFFFFF
+				);
+			}
 		}
 	}
 }
@@ -24,4 +35,5 @@ void MapData::Draw()
 void MapData::Init()
 {
 	floorGH = Novice::LoadTexture("./Resources/images/floor.png");
+	blockGH = Novice::LoadTexture("./Resources/images/block.png");
 }
