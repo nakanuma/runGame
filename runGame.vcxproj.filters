@@ -14,6 +14,15 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyDeta">
+      <UniqueIdentifier>{c66eb97b-4b31-45b9-955b-bf278437ec0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyDeta\Object">
+      <UniqueIdentifier>{8ac448e3-5c18-403f-99e6-d458afb68251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyDeta\Source">
+      <UniqueIdentifier>{333651f1-8815-4fee-bfef-e4df92fdaed1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -37,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>MyDeta\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +122,12 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h">
       <Filter>KamataEngine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>MyDeta\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStruct.h">
+      <Filter>MyDeta\Source</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
