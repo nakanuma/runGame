@@ -10,6 +10,10 @@ Player::~Player()
 
 void Player::Update()
 {
+	// y座標の更新
+	pos_.y -= static_cast<int>(velocity_.y);
+	// 毎フレーム加速度を加算
+	velocity_.y += accelerator_.y;
 }
 
 void Player::Draw()

@@ -31,6 +31,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
+		// プレイヤーの更新処理
+		player.Update();
+
 		///
 		/// ↑更新処理ここまで
 		///
