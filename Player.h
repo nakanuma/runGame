@@ -25,7 +25,7 @@ private:
 	const int size_ = 64;
 	Vector2 <int>pos_ = { size_ * 6,size_ * 8 };
 	Vector2 <float>velocity_ = { 0.0f,0.0f };
-	Vector2 <float>accelerator_ = { 0.0f,-1.2f };
+	Vector2 <float>accelerator_ = { 0.0f,2.0f };
 
 	bool isPlayerOnGround_ = false;
 

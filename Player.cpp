@@ -15,6 +15,7 @@ void Player::Update(char* keys)
 	if (MapData::map[LeftBottom_.y][LeftBottom_.x] != 0 || MapData::map[RightBottom_.y][RightBottom_.x] != 0) {
 		// 地面の上にいることにする
 		isPlayerOnGround_ = true; 
+		velocity_.y = 0.0f;
 		// 空中にいる場合はfalse
 	} else {
 		isPlayerOnGround_ = false;
@@ -28,9 +29,9 @@ void Player::Update(char* keys)
 	// プレイヤーのy座標の更新処理
 	pos_.y -= static_cast<int>(velocity_.y);
 
-	//プレイヤーが地面の上にいない場合は重力を受ける
+	// プレイヤーが地面の上にいない場合は重力を受ける
 	if (!isPlayerOnGround_) {
-		velocity_.y += accelerator_.y;
+		velocity_.y -= accelerator_.y;
 	}
 
 	// 4点のマップ座標を更新
