@@ -3,6 +3,13 @@
 
 class MapData {
 public:
+
+	enum BlockType {
+		NONE,
+		FLOOR,
+		BLOCK,
+	};
+
 	static void Draw();
 	static void Init();
 

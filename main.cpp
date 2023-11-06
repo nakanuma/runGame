@@ -22,7 +22,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// csvファイルの読み込み
 	MapLoader::LoadMap();
 
-	// プレイヤーのインスタンスを作成
+	// プレイヤーのインスタンスを生成
 	Player player;
 
 	// マップデータの初期化
@@ -42,7 +42,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 
 		// プレイヤーの更新処理
-		player.Update();
+		player.Update(keys);
 
 		///
 		/// ↑更新処理ここまで

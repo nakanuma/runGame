@@ -9,7 +9,7 @@ void MapData::Draw()
 	for (int i = 0; i < kMapColumn; i++) {
 		for (int j = 0; j < kMapRow; j++) {
 			// 床の描画
-			if (map[i][j] == 1) {
+			if (map[i][j] == FLOOR) {
 				Novice::DrawSprite(
 					j * kBlockSize, i * kBlockSize,
 					floorGH,
@@ -19,7 +19,7 @@ void MapData::Draw()
 				);
 			}
 			// ブロックの描画
-			if (map[i][j] == 2) {
+			if (map[i][j] == BLOCK) {
 				Novice::DrawSprite(
 					j * kBlockSize, i * kBlockSize,
 					blockGH,
